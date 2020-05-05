@@ -1,2 +1,6 @@
-public class Test {
+public class Test{
+
+    String hi;
+
+
 }
