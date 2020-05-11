@@ -1,12 +1,36 @@
+import com.sun.jdi.Value;
 import edu.princeton.cs.algs4.Stopwatch;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.Timer;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
+
+
+        // testing for LinearProbingHashSymbol tables of different sizes(MF * number of words in the dictionary)
+        for(int i = 8; i > 1; i = i/2) {
+            LinearProbingHashST<Integer, String> table = new LinearProbingHashST<>(i*321165);
+            Scanner sc = new Scanner(new File("words.english.txt"));
+            while(sc.hasNext()) {
+                String s = sc.next();
+                table.put(s.length(), s);
+            }
+            System.out.println("The hash table with mf " + i + " has been filled");
+            Scanner checker = new Scanner(new File("words.english.txt"));
+            Stopwatch timer = new Stopwatch();
+            while(checker.hasNext()) {
+                String next = checker.next();
+                String keyValues = table.get(next.length());
+                if(!next.equals(table.get(next.length()))) {
+                    System.out.println("The next item is not in the right location in the table");
+                }
+            }
+            double time = timer.elapsedTime();
+            System.out.println("Time to complete table with mf " + i + " is: " + time);
+        }
+
 
         // creation of the table that will hold every word
         LinearProbingHashST<Integer, String> table = new LinearProbingHashST<>(8*321165);
