@@ -16,4 +16,6 @@ full deletion of a of a Linear Probing Hash Symbol Table. Running the main metho
 a nice visual representation of the times that it takes to create, search, and delete tables
 of different portions of the dictionary added (different n) and different multiplication 
 factors (the full size of the table is the multiplication factor * the number of words that
-will be added.)
+will be added).
+
+To run our program the way we intended, just run the main method in the class main! Enjoy!

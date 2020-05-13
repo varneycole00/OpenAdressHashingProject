@@ -122,7 +122,7 @@ public class Main {
                 progress = 0; // keeps track of how many words have been deleted
                 Scanner wordsToDelete = new Scanner(new File("words.english.txt"));
                 Stopwatch deletionTimer= new Stopwatch(); // Timing how long each deletion takes
-                //Deleting values until we have deleted j values
+                // Deleting values until we have deleted j values
                 while(progress < j) {
                     String next = wordsToDelete.next();
                     table.delete(next);
