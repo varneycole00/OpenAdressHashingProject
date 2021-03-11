@@ -18,9 +18,4 @@ of different portions of the dictionary added (different n) and different multip
 factors (the full size of the table is the multiplication factor * the number of words that
 will be added).
 
-The URL for our video presentation is:
- https://drive.google.com/file/d/1d92pCz-lIlANjaOItrHc3HWVXreW487f/view?usp=sharing
-
 To run our program the way we intended, just run the main method in the class main! Enjoy!
-
-If there are any issues with viewing the video, feel free to email me at tcvarney@wpi.edu.
